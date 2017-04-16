@@ -1,6 +1,13 @@
 button{
     width: 100%;
 }
+a:link {color:#000;}     /* 未被访问的链接 */
+a:visited {color:#000;}  /* 已被访问的链接 */
+a:hover {color:#000;}    /* 鼠标指针移动到链接上 */
+a:active {color:#000;}   /* 正在被点击的链接 */
+tbody{
+    color: #000;
+}
 .my-card{
     background-color: #58B7FF;
 }

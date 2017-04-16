@@ -130,7 +130,7 @@
                       </select>
                     </td>
                     <td class="one-table-20td">
-                      <button type="button" class="btn btn-default">大学分数线</button>
+                      <button type="button" class="btn btn-default" id="select-uni-score-button">大学分数线</button>
                     </td>
                   </tr>
                   <tr>
@@ -153,7 +153,7 @@
                       </select>
                     </td>
                     <td class="one-table-20td">
-                      <button type="button" class="btn btn-default">专业分数线</button>
+                      <button type="button" class="btn btn-default" id="select-major-score-button">专业分数线</button>
                     </td>
                   </tr>
                   <tr>
@@ -176,7 +176,7 @@
                       </select>
                     </td>
                     <td class="one-table-20td">
-                      <button type="button" class="btn btn-default">地区分数线</button>
+                      <button type="button" class="btn btn-default" id="select-city-score-button">地区分数线</button>
                     </td>
                   </tr>
                 </table>
@@ -202,7 +202,7 @@
               <div id="select-major">
                 <table class="table table-hover">
                   <thead class="my-font">
-                    <tr><th class="one-table-5td">#</th><th class="one-table-30td">专业名称</th><th class="one-table-20td">所设院校</th><th class="one-table-20td">招生区</th><th class="one-table-20td">百科</th><th class="one-table-10td">查看</th></tr>
+                    <tr><th class="one-table-5td">#</th><th class="one-table-20td">专业名称</th><th class="one-table-20td">所设院校</th><th class="one-table-10td">科别</th><th class="one-table-20td">招生区</th><th class="one-table-20td">百科</th><th class="one-table-10td">查看</th></tr>
                   </thead>
                   <tbody>
                     <tr><th>0</th><th>沈阳工业大学</th><th>本科</th><th>沈阳</th><th>百科</th><th><button type="button" class="btn btn-success result-button">历年分数线</button></th></tr>
@@ -232,17 +232,17 @@
               <div id="major-limit">
                 <table class="table table-hover">
                   <thead class="my-font">
-                    <tr><th class="one-table-5td">#</th><th class="one-table-20td">专业名称</th><th class="one-table-15td">科别</th><th class="one-table-15td">招生区</th><th class="one-table-10td">年份</th><th class="one-table-10td">批次</th><th class="one-table-10td">平均分</th><th class="one-table-20td">百科</th><th class="one-table-10td">查看</th></tr>
+                    <tr><th class="one-table-5td">#</th><th class="one-table-10td">专业名称</th><th class="one-table-20td">大学名称</th><th class="one-table-10td">科别</th><th class="one-table-10td">招生区</th><th class="one-table-10td">年份</th><th class="one-table-10td">批次</th><th class="one-table-10td">平均分</th><th class="one-table-20td">百科</th><th class="one-table-10td">查看</th></tr>
                   </thead>
                   <tbody>
-                    <tr><th>0</th><th>沈阳工业大学</th><th>本科</th><th>沈阳</th><th>百科</th><th>百科</th><th>百科</th><th>百科</th><th><button type="button" class="btn btn-success result-button">历年分数线</button></th></tr>
+                    <tr><th>0</th><th>沈阳工业大学</th><th>本科</th><th>沈阳</th><th>百科</th><th>百科</th><th>百科</th><th>百科</th><th>百科</th><th><button type="button" class="btn btn-success result-button">历年分数线</button></th></tr>
                   </tbody>
                 </table>
               </div>
               <div id="city-limit">
                 <table class="table table-hover">
                   <thead class="my-font">
-                    <tr><th class="one-table-5td">#</th><th class="one-table-20td">大学名称</th><th class="one-table-10td">科别</th><th class="one-table-15td">招生区</th><th class="one-table-10td">年份</th><th class="one-table-10td">批次</th><th class="one-table-10td">控分线</th><th class="one-table-20td">百科</th><th class="one-table-10td">查看</th><th class="one-table-10td">查看</th></tr>
+                    <tr><th class="one-table-5td">#</th><th class="one-table-20td">大学名称</th><th class="one-table-5td">科别</th><th class="one-table-15td">招生区</th><th class="one-table-10td">年份</th><th class="one-table-10td">批次</th><th class="one-table-10td">控分线</th><th class="one-table-20td">百科</th><th class="one-table-10td">查看</th><th class="one-table-10td">查看</th></tr>
                   </thead>
                   <tbody>
                     <tr><th>0</th><th>沈阳工业大学</th><th>本科</th><th>沈阳</th><th>百科</th><th>百科</th><th>百科</th><th>百科</th><th><button type="button" class="btn btn-success result-button">所设专业</button></th><th><button type="button" class="btn btn-success result-button">历年分数线</button></th></tr>
@@ -276,41 +276,42 @@
         </div>
       </div>
     </div>
-    <div id="gtu-body-foot">
-      <div class="panel panel-default my-card">
-        <div class="panel-heading my-card-head">沈阳工业大学所设专业</div>
-        <div class="panel-body">
-          <div id="show-all-major">
-            <table class="table table-hover">
-              <thead class="my-font">
-                <tr><th class="one-table-5td">#</th><th class="one-table-20td">大学名称</th><th class="one-table-10td">科别</th><th class="one-table-15td">招生区</th><th class="one-table-10td">年份</th><th class="one-table-10td">批次</th><th class="one-table-10td">控分线</th><th class="one-table-20td">百科</th></tr>
-              </thead>
-              <tbody>
-                <tr><th>0</th><th>沈阳工业大学</th><th>本科</th><th>沈阳</th><th>百科</th><th>百科</th><th>百科</th><th>百科</th></tr>
-              </tbody>
-            </table>
-          </div>
+    <div class="panel panel-default my-card" id="gtu-body-foot-majors">
+      <div class="panel-heading my-card-head">所设专业</div>
+      <div class="panel-body">
+        <div id="show-all-major">
+          <table class="table table-hover">
+            <thead class="my-font">
+              <tr><th class="one-table-5td">#</th><th class="one-table-20td">学校名称</th><th class="one-table-20td">专业名称</th><th class="one-table-10td">科别</th><th class="one-table-15td">招生区</th><th class="one-table-10td">年份</th><th class="one-table-10td">批次</th><th class="one-table-10td">平均分</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>0</th><th>沈阳工业大学</th><th>本科</th><th>沈阳</th><th>百科</th><th>百科</th><th>百科</th><th>百科</th></tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div class="panel panel-default my-card">
-        <div class="panel-heading my-card-head">沈阳工业大学历史分数线</div>
-        <div class="panel-body">
-          <div id="show-all-score">
-            <table class="table table-hover">
-              <thead class="my-font">
-                <tr><th class="one-table-5td">#</th><th class="one-table-20td">大学名称</th><th class="one-table-10td">科别</th><th class="one-table-15td">招生区</th><th class="one-table-10td">年份</th><th class="one-table-10td">批次</th><th class="one-table-10td">控分线</th><th class="one-table-20td">百科</th></tr>
-              </thead>
-              <tbody>
-                <tr><th>0</th><th>沈阳工业大学</th><th>本科</th><th>沈阳</th><th>百科</th><th>百科</th><th>百科</th><th>百科</th></tr>
-              </tbody>
-            </table>
-          </div>
+    </div>
+    <div class="panel panel-default my-card" id="gtu-body-foot-history-score">
+      <div class="panel-heading my-card-head">历史分数线</div>
+      <div class="panel-body">
+        <div id="show-all-score">
+          <table class="table table-hover">
+            <thead class="my-font">
+              <tr><th class="one-table-5td">#</th><th class="one-table-20td">大学名称</th><th class="one-table-10td">科别</th><th class="one-table-15td">招生区</th><th class="one-table-10td">年份</th><th class="one-table-10td">批次</th><th class="one-table-10td">控分线</th><th class="one-table-20td">百科</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>0</th><th>沈阳工业大学</th><th>本科</th><th>沈阳</th><th>百科</th><th>百科</th><th>百科</th><th>百科</th></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
     <div id="gtu-foot" class="panel panel-default my-card">
       <div class="panel-body">
-        <p>go to university</p>
+        <p>Go To University</p>
+        <p>编程改变世界, 奋斗成就未来</p>
+        <p>Programming changes the world, striving for the future</p>
+        <p> gc &amp; yongfa &amp; gtu &copy; 2017 </p>
       </div>
     </div>
 

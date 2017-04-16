@@ -33,5 +33,7 @@
     float: right;
 }
 #gtu-foot{
-    height: 150px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
 }
